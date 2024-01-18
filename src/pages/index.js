@@ -20,9 +20,10 @@ export default function Home() {
         const res = await axios.get('https://quizapp-0hs0.onrender.com/facts')
         setData(res.data)
       } catch (error) {
-        isUserLoggedIn()
+        console.log(error)
       }
     }
+    isUserLoggedIn()
     fetchData()
   }, []);
   
@@ -33,7 +34,6 @@ export default function Home() {
   return (
     <div>
     <header>
-    <img className="logo" src="https://branition.zxcom/assets/img/users/logos/2395-gsawPj6.webp" ></img>
     <nav>
     <ul className="nav-links">
     <li><a href="/">Facts</a></li>
@@ -46,15 +46,16 @@ export default function Home() {
     {
       data.map((value) => {
         return(
-        <> 
-        <h1>{value.title}</h1>
-        <div className='fact'>{value.fact}</div>
-        <div className='date'>{value.date}</div>
-        <p><Likes likes={value.likes} factId={value._id}dislikes={value.dislikes}/></p>
-        </>
-        )})
+          <> 
+          <h1>{value.title}</h1>
+          <div className='fact'>{value.fact}</div>
+          <div className='date'>{value.date}</div>
+          <p><Likes likes={value.likes} factId={value._id}dislikes={value.dislikes}/></p>
+          </>
+          )})
+        }
+        </div>
+        </div>
+        )
       }
-      </div>
-      </div>
-      )
-    }
+      

@@ -40,7 +40,7 @@ function Myfacts() {
     return (
         <div>
             <header>
-    <img className="logo" src="https://scalebranding.com/wp-content/uploads/2021/01/1-48.jpgg" ></img>
+
     <nav>
     <ul className="nav-links">
     <li><a onClick={handleMainButton}>Facts</a></li>
