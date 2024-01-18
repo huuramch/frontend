@@ -75,7 +75,7 @@ const Login = () => {
         <button className="btn" onClick={() => LoginUser(email, password)}>login</button>
         {/* <div style={{color: "red"}}>{required}</div> */}
         <div className="register-link">
-        <p>Don't have an account? <a href="#">Sign up</a></p>
+        <p>Don't have an account? <a href="/sign-up">Sign up</a></p>
         </div>
         </form>
         </div>
